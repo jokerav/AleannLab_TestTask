@@ -1,4 +1,9 @@
+import {useGetDataQuery} from '../store/dataApi';
+
 export const App = () => {
+  console.log('App');
+  const { data = [], error, isLoading } = useGetDataQuery();
+  console.log(data);
   return (
     <div
       style={{
