@@ -1,23 +1,13 @@
-import {useGetDataQuery} from '../store/dataApi';
+import { Routes, Route } from 'react-router-dom';
+import JobsList from './jobsList/jobsList';
 
 export const App = () => {
   console.log('App');
-  const { data = []
-    // , error, isLoading
-  } = useGetDataQuery();
-  console.log(data);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route exact path="/" element={<JobsList />}></Route>
+      {/*<Route path="job/:jobId" element={<JobItem />}></Route>*/}
+    </Routes>
   );
 };
