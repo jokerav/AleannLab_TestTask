@@ -1,7 +1,9 @@
 import { useGetDataQuery } from '../../store/dataApi';
 import JobItem from '../jobItem/JobItem';
 const JobsList = ()=>{
-  const { data = [], error, isLoading } = useGetDataQuery();
+  const { data = []
+    // , error, isLoading
+  } = useGetDataQuery();
   console.log(data);
 return(
   <ul>
