@@ -1,5 +1,11 @@
+import { Link, useLocation } from 'react-router-dom';
 const JobItem = ({ job })=> {
-  const {description} = job;
-  return <li>{description}</li>
+  const {description, id} = job;
+
+  return <li>
+    <Link to={`/job/${id}`}>
+      {description}
+      </Link>
+  </li>
 }
 export default JobItem
