@@ -6,8 +6,9 @@ const JobDetails = ()=>{
     // , error, isLoading
   } = useGetDataQuery();
   const {jobId} = useParams();
-  console.log(data);
-  const job = data.filter(job => job.id === jobId);
+
+  const currentJob = data.filter(job => job.id === jobId);
+  console.log(currentJob);
   return(
     <>
 {<Link to='/'>Back</Link>}
