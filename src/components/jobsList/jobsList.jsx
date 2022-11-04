@@ -4,10 +4,9 @@ const JobsList = ()=>{
   const { data = []
     // , error, isLoading
   } = useGetDataQuery();
-  console.log(data);
+  // console.log(data);
 return(
   <ul>
-
     {data.length > 0 && data.map(job =>(<JobItem key={job.id} job={job}/>))}
   </ul>
 )}
