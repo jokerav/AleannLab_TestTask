@@ -12,7 +12,7 @@ const JobItem = ({ job })=> {
     // other logic
   }
   const {title, id, createdAt, pictures, address} = job;
-  const difference = differenceInMonths(new Date, new Date(createdAt));
+  const difference = differenceInMonths(new Date(), new Date(createdAt));
   return <li>
     <Link to={`/job/${id}`}>
       <p>{title}</p>
