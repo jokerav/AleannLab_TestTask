@@ -3,9 +3,7 @@ import JobsList from './jobsList/jobsList';
 import JobDetails from './JobDetails/JobDetails';
 
 export const App = () => {
-  console.log('App');
-
-  return (
+    return (
     <Routes>
       <Route exact path="/" element={<JobsList />}></Route>
       <Route path="job/:jobId" element={<JobDetails />}></Route>
